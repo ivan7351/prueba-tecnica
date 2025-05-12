@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salida de Inventario</title>
+    <link rel="stylesheet" href="../../public/salida/salida.css"> <!-- Si tienes un archivo CSS para estilos -->
+</head>
+<body>
+
+    <div class="container">
+        <h1>Salida de Inventario</h1>
+        <a href="../inventario/inventario_almacenista.html">Ver inventario -></a>
+        <a href="../../controller/login/logout.php">logout -></a>
+        <h2>Seleccionar producto y cantidad a sacar</h2>
+
+        <!-- Formulario de salida de inventario -->
+        <div class="form-section">
+            <form id="formSalida" method="POST" action="procesar_salida.php">
+                <label for="producto">Selecciona el producto:</label>
+                <select name="producto" id="producto" required>
+                    <!-- Aquí se llenarán los productos activos mediante PHP o JavaScript -->
+                    <option value="1" data-stock="50">Producto A - 50 unidades</option>
+                    <option value="2" data-stock="30">Producto B - 30 unidades</option>
+                    <option value="3" data-stock="20">Producto C - 20 unidades</option>
+                </select>
+
+                <label for="cantidad">Cantidad a sacar:</label>
+                <input type="number" id="cantidad" name="cantidad" min="1" required>
+                
+                <button type="submit">Registrar salida</button>
+
+                <!-- Mensaje de error si la cantidad solicitada excede el inventario -->
+                <div id="error" class="error" style="display: none;">La cantidad solicitada excede el inventario disponible.</div>
+            </form>
+        </div>
+    </div>
+
+    <script src="../salida/js/inventario_almacenista.js"></script>
+    
+
+</body>
+</html>

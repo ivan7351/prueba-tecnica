@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Módulo de Inventario</title>
+     <link rel="stylesheet" href="../../public/inventario/inventario_almacenista.css">
+
+</head>
+<body>
+<div id="encabezado">
+    <h1>Inventario de la Empresa</h1>
+ <a href="../salida/salida.html">Ver salidas -></a>
+ <a href="../../controller/login/logout.php">log out -></a>
+</div>
+
+    <!-- Lista de productos -->
+    <h2>Lista de Productos</h2>
+    
+<div id="tabla">
+    <table id="tablaInventario">
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Descripción</th>
+                <th>Cantidad</th>
+                <th>Estatus</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Productos cargados dinámicamente -->
+        </tbody>
+    </table>
+    </div>
+    <script src="../inventario/js/inventario_almacenista.js"></script>
+
+</body>
+</html>

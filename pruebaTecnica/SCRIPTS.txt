@@ -1,0 +1,31 @@
+CREATE TABLE usuarios (
+    idusuario INT(6) PRIMARY KEY AUTO_INCREMENT,
+    nombre VARCHAR(100) NOT NULL,
+    correo VARCHAR(50) NOT NULL UNIQUE,
+    contrasena VARCHAR(25) NOT NULL,
+    idrol INT(2) NOT NULL,
+    estatus INT(1) NOT NULL DEFAULT 1
+);
+
+
+
+CREATE TABLE productos (
+    idproducto INT AUTO_INCREMENT PRIMARY KEY,
+    nombre VARCHAR(100) NOT NULL,
+    descripcion TEXT,
+    cantidad INT NOT NULL DEFAULT 0,
+    estatus INT(2) NOT NULL,
+    accion INT(2) NOT NULL
+);
+
+
+CREATE TABLE historial (
+    idhistorial INT AUTO_INCREMENT PRIMARY KEY,
+    idproducto INT NOT NULL,
+    tipo_movimiento INT NOT NULL,
+    cantidad INT NOT NULL,
+    fecha_hora DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    correo varchar(40) NOT NULL,
+    FOREIGN KEY (idproducto) REFERENCES productos(idproducto),
+    FOREIGN KEY (correo) REFERENCES usuarios(correo)
+);

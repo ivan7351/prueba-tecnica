@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Historial de Movimientos</title>
+    <link rel="stylesheet" href="../../public/historial/historial.css"> <!-- Si tienes un archivo CSS para estilos -->
+</head>
+<body>
+
+    <div class="container">
+        <div id="encabezado">
+        <h1>Historial de Movimientos de Inventario</h1>
+        <a href="../inventario/inventario.html">Ver inventario -></a>
+        <a href="../../controller/login/logout.php">log out -></a>
+        </div>
+        <!-- Filtro por tipo de movimiento -->
+        <div class="form-section">
+            <label for="tipoMovimiento">Filtrar por tipo de movimiento:</label>
+            <select id="tipoMovimiento">
+                <option value="todos">Todos</option>
+                <option value="entrada">Entrada</option>
+                <option value="salida">Salida</option>
+            </select>
+        </div>
+        
+        <!-- Tabla para mostrar el historial de movimientos -->
+        <table id="tablaMovimientos">
+            <thead>
+                <tr>
+                    <th>Fecha y Hora</th>
+                    <th>Producto</th>
+                    <th>Cantidad</th>
+                    <th>Tipo de Movimiento</th>
+                    <th>Usuario</th>
+                </tr>
+            </thead>
+            <tbody>
+                
+            </tbody>
+        </table>
+    </div>
+    <script src="../historial/js/historial.js"></script>
+
+</body>
+</html>
